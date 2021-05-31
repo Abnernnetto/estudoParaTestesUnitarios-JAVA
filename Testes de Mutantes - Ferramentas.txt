@@ -1,0 +1,34 @@
+Jumble - Java
+Jester - Java
+Stryker - Dotnet Core/JS
+Pitest - Java/Kotlin
+Moon - C++
+Muter - Swift
+Mutpy - Python
+Tipo de Testes
+https://www.tutorialspoint.com/software_testing_dictionary/mutation_testing.htm
+https://pairwise.teremokgames.com/
+
+Teste de Mutação - A cobertura de teste tradicional (ou seja, linha, instrução, ramificação, etc.) mede apenas qual código é executado por seus testes. Ele não verifica se seus testes são realmente capazes de detectar falhas no código executado. Portanto, ele só é capaz de identificar códigos que definitivamente não foram testados .
+rápido - pode analisar em minutos o que levaria dias de sistemas anteriores
+fácil de usar - funciona com ant, maven, gradle e outros
+O PIT escolhe e prioriza os testes com base em três fatores
+Vantagens
+Cobertura de linha
+Velocidade de execução do teste
+Convenção de nomenclatura de teste
+Mutações de valor: uma tentativa de alterar os valores para detectar erros nos programas. Normalmente alteramos um valor para um valor muito maior ou um valor para um valor muito menor. A estratégia mais comum é alterar as constantes.
+
+Mutações de decisão: as decisões / condições são alteradas para verificar os erros de projeto. Normalmente, um muda os operadores aritméticos para localizar os defeitos e também podemos considerar a mutação de todos os operadores relacionais e operadores lógicos (AND, OR, NOT)
+
+Mutações de instrução: alterações feitas nas instruções excluindo ou duplicando a linha que pode surgir quando um desenvolvedor está copiando e colando o código de outro lugar.
+
+
+Teste de Instrução(Statement/Coverage Instruction)TÉCNICA - Eclipse/ IntelliJ
+Coverage Branch - Eclipse/IntelliJ (EclEMMA - Jacoco) MÉTODO - é uma medida de ramificações que foram avaliadas como verdadeiras e falsas no teste. Garantir que cada ramificação de cada ponto de decisão possível seja executado pelo menos uma vez.
+Teste de Decisão (Decision coverage)TÉCNICA - relata os resultados verdadeiros ou falsos de cada expressão booleana do código-fonte
+		 (Condition coverage) - A cobertura de condição mede a proporção de condições nas expressões de decisão que foram avaliadas como verdadeiras e falsas.
+Condition Coverage MÉTODO - É um método de teste usado para testar e avaliar as variáveis ​​ou subexpressões na declaração condicional
+é verificar os resultados individuais para cada condição lógica.
+oferece melhor sensibilidade ao fluxo de controle do que a cobertura de decisão.
+Nesta cobertura, apenas expressões com operandos lógicos são consideradas.
