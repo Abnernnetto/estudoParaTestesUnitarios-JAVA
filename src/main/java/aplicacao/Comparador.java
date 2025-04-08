@@ -10,9 +10,7 @@ public class Comparador {
             return false;
         }
     }
-	
-	
-	
+
 	
 	public boolean comparaNumeros(int numeroA, int numeroB, int numeroX, int numeroY){
         if((numeroA > numeroB) && (numeroX < numeroY)){
