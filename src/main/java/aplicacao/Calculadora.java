@@ -3,7 +3,7 @@ package aplicacao;
 public class Calculadora {
 	
 	
-	/* Classe que tem apenas instruções para executar */
+	/* Classe que tem apenas instruï¿½ï¿½es para executar */
 	
     public int somaDeValores(int numeroA, int numeroB){
         return numeroA + numeroB;

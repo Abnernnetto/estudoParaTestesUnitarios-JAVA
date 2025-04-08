@@ -1,10 +1,12 @@
 package pacoteTeste;
 
-import org.junit.Assert;
-import org.junit.Test;
-import org.junit.jupiter.api.DisplayName;
-
 import aplicacao.Comparador;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+
 
 public class ComparadorTest {
 	
@@ -14,28 +16,28 @@ public class ComparadorTest {
     @DisplayName("Numero A e maior dos valores")
     public void testeComparacaoDeValoresA(){
         boolean resultado = comp.comparaNumeros(5, 2);
-        Assert.assertEquals(true, resultado);
+        Assertions.assertEquals(true, resultado);
     }
     
     @Test
     @DisplayName("Numero B e maior dos valores")
     public void testeComparacaoDeValoresB(){
         boolean resultado = comp.comparaNumeros(1, 2);
-        Assert.assertTrue(resultado);
+        Assertions.assertTrue(resultado);
     }
     
     @Test
     @DisplayName("Numeros iguais")
     public void testeEquiparidadeDeValores(){
         boolean resultado = comp.comparaNumeros(5, 5);
-        Assert.assertFalse(resultado);
+        Assertions.assertFalse(resultado);
     }
     
     //--------------------------------------------
     
-    //Uso de Tabela de Decisão ou Teste de Decisão de Condição Modificada(MC/DC)
+    //Uso de Tabela de Decisï¿½o ou Teste de Decisï¿½o de Condiï¿½ï¿½o Modificada(MC/DC)
     /*
-     * /*Uso de Tabela de Decisão, identificando as entradas e analisando as saídas
+     * /*Uso de Tabela de Decisï¿½o, identificando as entradas e analisando as saï¿½das
 	 * http://www.juliodelima.com.br/xdecision/
 	 * O resultado montou 256 testes
 	 * 
@@ -48,7 +50,7 @@ public class ComparadorTest {
     @DisplayName("A maior que B e X menor que Y")
     public void testeAmaiorBeXmenorY(){
         boolean resultado = comp.comparaNumeros(6, 5, 1, 2);
-        Assert.assertTrue(resultado);
+        Assertions.assertTrue(resultado);
     }
     
     //VF = F
@@ -56,7 +58,7 @@ public class ComparadorTest {
     @DisplayName("A maior que B e X maior que Y")
     public void testeAmaiorBeXmaiorY(){
         boolean resultado = comp.comparaNumeros(6, 5, 3, 2);
-        Assert.assertFalse(resultado);
+        Assertions.assertFalse(resultado);
     }
     
     //FV = F
@@ -64,7 +66,7 @@ public class ComparadorTest {
     @DisplayName("A menor que B e X menor que Y")
     public void testeAmenorBeXmenorY(){
         boolean resultado = comp.comparaNumeros(1, 5, 1, 2);
-        Assert.assertFalse(resultado);
+        Assertions.assertFalse(resultado);
     }
     
     //FF = F
@@ -72,43 +74,43 @@ public class ComparadorTest {
     @DisplayName("A menor que B e X maior que Y")
     public void testeAmenorBeXmaiorY(){
         boolean resultado = comp.comparaNumeros(1, 5, 7, 2);
-        Assert.assertFalse(resultado);
+        Assertions.assertFalse(resultado);
     }
     
-    //Instrução e Branch dizia que estava 100% coberto, mas o Mutantes disse que não
-    //Então acrescentei mais testes para cobrir os meus unitários, conforme abaixo:
+    //Instruï¿½ï¿½o e Branch dizia que estava 100% coberto, mas o Mutantes disse que nï¿½o
+    //Entï¿½o acrescentei mais testes para cobrir os meus unitï¿½rios, conforme abaixo:
     @Test
     @DisplayName("A igual B e X igual Y")
     public void testeAigualBeXigualY(){
         boolean resultado = comp.comparaNumeros(1, 1, 1, 1);
-        Assert.assertFalse(resultado);
+        Assertions.assertFalse(resultado);
     }
     
     @Test
     @DisplayName("A igual B e X maior Y")
     public void testeAigualBeXmaiorY(){
         boolean resultado = comp.comparaNumeros(1, 1, 2, 1);
-        Assert.assertFalse(resultado);
+        Assertions.assertFalse(resultado);
     }
     
     @Test
     @DisplayName("A igual B e X menor Y")
     public void testeAigualBeXmenorY(){
         boolean resultado = comp.comparaNumeros(1, 1, 1, 2);
-        Assert.assertFalse(resultado);
+        Assertions.assertFalse(resultado);
     }
-    //Até aqui, está cobrindo 92% das Mutações
+    //Atï¿½ aqui, estï¿½ cobrindo 92% das Mutaï¿½ï¿½es
     @Test
     @DisplayName("A menor B e X igual Y")
     public void testeAmenorBeXigualY(){
         boolean resultado = comp.comparaNumeros(1, 2, 3, 3);
-        Assert.assertFalse(resultado);
+        Assertions.assertFalse(resultado);
     }
     
     @Test
     @DisplayName("A maior B e X igual Y")
     public void testeAmaiorBeXigualY(){
         boolean resultado = comp.comparaNumeros(2, 1, 5, 5);
-        Assert.assertFalse(resultado);
+        Assertions.assertFalse(resultado);
     }
 }

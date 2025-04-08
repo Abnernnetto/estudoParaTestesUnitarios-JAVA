@@ -1,7 +1,7 @@
 package aplicacao;
 
 public class ComparadorDeDecisao {
-	//Classe para tomada de decisão
+	//Classe para tomada de decisï¿½o
 	public boolean compararDecisao(int numero){		
         if(numero > 5) {
         	numero = numero * 3;

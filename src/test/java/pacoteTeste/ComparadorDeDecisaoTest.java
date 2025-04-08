@@ -1,16 +1,18 @@
 package pacoteTeste;
 
-import org.junit.Assert;
-import org.junit.Test;
-import org.junit.jupiter.api.DisplayName;
-
 import aplicacao.ComparadorDeDecisao;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+
 
 public class ComparadorDeDecisaoTest {
 	
 	ComparadorDeDecisao comp = new ComparadorDeDecisao();
 	
-	//Particão de Equivalencia
+	//Particï¿½o de Equivalencia
 	/*			>5
 	 * |---2----|---6---|
 	 * |  Uso   |  Uso  |
@@ -18,20 +20,20 @@ public class ComparadorDeDecisaoTest {
 	 * 
 	 */
 	
-	//Teste que cobre 50% da Decisão
+	//Teste que cobre 50% da Decisï¿½o
 	@Test
     @DisplayName("Numero e menor")
     public void testeDecisaoNumeroMenor(){
         boolean resultado = comp.compararDecisao(2);
-        Assert.assertEquals(false, resultado);
+		Assertions.assertEquals(false, resultado);
     }
 	
-	//Teste que cobre 50% da Decisão
+	//Teste que cobre 50% da Decisï¿½o
 	@Test
     @DisplayName("Numero e maior")
     public void testeDecisaoNumeroMaior(){
 		boolean resultado = comp.compararDecisao(6);
-        Assert.assertEquals(true, resultado);
+		Assertions.assertEquals(true, resultado);
     }
 	//100% Coberto pelo "Covered Instructions" e 100% de "Covered Branch".
 	//Analise de valor limite
@@ -47,14 +49,14 @@ public class ComparadorDeDecisaoTest {
     @DisplayName("Numero igual")
     public void testeDecisaoNumeroIgual(){
 		boolean resultado = comp.compararDecisao(5);
-        Assert.assertEquals(false, resultado);
+		Assertions.assertEquals(false, resultado);
     }
 	
 	/*
-	 * Mesmo com a aplicação destas técnicas no tipo de teste de Decisão, o Teste de Mutantes não
-	 * deixa 100% a cobertura do código, devido sugerir a troca do operador '*' por '/', ou seja,
-	 * alterar a operação do método da classe de multiplicação para divisão, atingindo 96% de cobertura
-	 * de testes unitários.
+	 * Mesmo com a aplicaï¿½ï¿½o destas tï¿½cnicas no tipo de teste de Decisï¿½o, o Teste de Mutantes nï¿½o
+	 * deixa 100% a cobertura do cï¿½digo, devido sugerir a troca do operador '*' por '/', ou seja,
+	 * alterar a operaï¿½ï¿½o do mï¿½todo da classe de multiplicaï¿½ï¿½o para divisï¿½o, atingindo 96% de cobertura
+	 * de testes unitï¿½rios.
 	 * */
 	
 }
